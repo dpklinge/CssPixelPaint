@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="HeatMap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="HeatMap.js"></script>
+	
+	
+</head>
+<body id="body" onload="generateHeatSquares()" oncontextmenu="return false;" >
+	<div id="grid" class="grid" ondragstart="return false;" >	
+	</div>
+	<div id="draggableUI" class="unselectable">
+		<div id="floater" class="floater">
+			<button id="fullhide" onclick="fullhide('draggableUI')">x</button>
+			<button id="hide" onclick="hide('floater')">_</button>
+			<p>Controls: </p>
+			<p id="additivity">'a'=additivity mode</p>
+			<p id="replacement">'r'=replacement mode</p>
+			<p id="colorChange">'t'=Select new color</p>
+			<p id="eraser">'e'=White color (eraser)</p>
+			<p id="paintbrush">'p'=Swap next color</p>
+			<p id="leftClick">Left Click = paint</p>
+			<p id="rightClick">Right Click = subtract</p>
+			<p>Color history </p>
+			<p>Type target number to select</p>
+			<p id="rgb1" class="rgb"></p>
+			<p id="rgb2" class="rgb"></p>
+			
+		</div>
+		<div id="show">
+			<button  onclick="show('floater')">.</button>
+		</div>
+	</div>
+</body>
+<script src="Draggable.js"></script>
+</html>
